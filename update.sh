@@ -1,4 +1,7 @@
 #!/bin/bash
+
+#made by drake morgan
+
 # a script to do standared cyberpatriot stuff, shellchecked and everything
 input() {
     while :
@@ -34,7 +37,7 @@ cd ~/ || exit
 printf "Update and Upgrade system"
 if input
 then
-sudo apt-get update && sudo apt-get upgrade -y
+    sudo apt-get update && sudo apt-get upgrade -y
 fi
 # formatting ?
 printf "\n"
@@ -42,7 +45,7 @@ printf "\n"
 printf "Remove unused files"
 if input
 then
-sudo apt remove * -y
+    sudo apt remove * -y
 fi
 printf "\n"
 
@@ -50,22 +53,22 @@ printf "\n"
 printf "Enable firewall"
 if input
 then
-sudo ufw enable
+    sudo ufw enable
 fi
 
 printf "Show firewall status"
 if input
 then
-sudo ufw status
+    sudo ufw status
 fi
 
 printf "Deal with users"
 if input
 then
-allusernames=`cat ${studentlist} | awk {'print substr($1,1,1) $2 substr($3,length($3)-3,length($3))'}`
-for username in $allusernames
-echo $username
-done
+    allusernames=`cat ${studentlist} | awk {'print substr($1,1,1) $2 substr($3,length($3)-3,length($3))'}`
+    for username in $allusernames
+        echo $username
+    done
 fi
 
 # end of programme, technecaly unessisary but just to let the programme know
