@@ -32,7 +32,7 @@ input() {
     done
 }
 # remember to allways include the or exit incase their is an inability to change directories
-cd ~/ || exit
+cd ~/ || {printf "failed to change to root file... Exiting"; exit;}
 # because I'm returning true with return 0 as input then when a user presses y it will run
 printf "Update and Upgrade system"
 if input
@@ -72,4 +72,5 @@ then
 fi
 
 # end of programme, technecaly unessisary but just to let the programme know
+printf "Script Done!"
 exit
