@@ -32,7 +32,7 @@ input() {
     done
 }
 # remember to allways include the or exit incase their is an inability to change directories
-cd ~/ || {printf "failed to change to root file... Exiting"; exit;}
+cd ~/ || { printf "failed to change to root file... Exiting"; exit; }
 # because I'm returning true with return 0 as input then when a user presses y it will run
 printf "Update and Upgrade system"
 if input
@@ -45,7 +45,7 @@ printf "\n"
 printf "Remove unused files"
 if input
 then
-    sudo apt remove * -y
+    sudo apt autoremove -y
 fi
 printf "\n"
 
@@ -65,12 +65,13 @@ fi
 printf "Deal with users"
 if input
 then
-    allusernames=`cat ${studentlist} | awk {'print substr($1,1,1) $2 substr($3,length($3)-3,length($3))'}`
+	allusernames=$(awk 'BEGIN{ FS = ":" }; $3 >= 1000 && $3 < 60000 { print $0 }' /etc/passwd)
     for username in $allusernames
-        echo $username
+    do
+        echo "$username"
     done
 fi
 
 # end of programme, technecaly unessisary but just to let the programme know
-printf "Script Done!"
+printf "Script Done!\n"
 exit
