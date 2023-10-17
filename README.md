@@ -1,5 +1,11 @@
 # Cyberpatriots
 
-## Right now this Readme is worthless.
+## Use
 
-Why I get a computer that can type at more than 3 letters a minuet I will work on this
+* git clone https://github.com/BitWonder/Cyberpatriots.git
+
+* cd Cyberpatriots
+
+* chmod +x update.sh
+
+* ./update.sh

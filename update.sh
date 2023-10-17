@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#made by drake morgan
+# made by drake morgan
 
 # a script to do standared cyberpatriot stuff, shellchecked and everything
 input() {
@@ -33,6 +33,12 @@ input() {
 }
 # remember to allways include the or exit incase their is an inability to change directories
 cd ~/ || { printf "failed to change to root file... Exiting"; exit; }
+
+# because why not
+sudo apt-get install neofetch
+
+neofetch
+
 # because I'm returning true with return 0 as input then when a user presses y it will run
 printf "Update and Upgrade system"
 if input
