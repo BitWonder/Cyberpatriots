@@ -65,12 +65,14 @@ if input
 then
     sudo ufw enable
 fi
+printf "\n"
 
 printf "Show firewall status"
 if input
 then
     sudo ufw status
 fi
+printf "\n"
 
 printf "Deal with users"
 if input
@@ -78,9 +80,9 @@ then
     printf "Are your users in the users.txt file"
     if input
     then
-        cd $file
-        userarray=`sed '${x//$'\n'/ }' < users.txt`
-        printf $userarray
+        # bad code cd $file
+        # bad code userarray=`sed '${x//$'\n'/ }' < users.txt`
+        # bad code printf $userarray
         printf "\n \n"
         allusernames=$(awk 'BEGIN{ FS = ":" }; $3 >= 1000 && $3 < 60000 { print $1 }' /etc/passwd)
         for username in $allusernames
