@@ -31,6 +31,10 @@ input() {
     esac
     done
 }
+
+# save file of users
+file=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+
 # remember to allways include the or exit incase their is an inability to change directories
 cd ~/ || { printf "failed to change to root file... Exiting"; exit; }
 
@@ -71,11 +75,19 @@ fi
 printf "Deal with users"
 if input
 then
-	allusernames=$(awk 'BEGIN{ FS = ":" }; $3 >= 1000 && $3 < 60000 { print $0 }' /etc/passwd)
-    for username in $allusernames
-    do
-        echo "$username"
-    done
+    printf "Are your users in the users.txt file"
+    if input
+    then
+        cd $file
+        userarray=`sed '${x//$'\n'/ }' < users.txt`
+        printf $userarray
+        printf "\n \n"
+        allusernames=$(awk 'BEGIN{ FS = ":" }; $3 >= 1000 && $3 < 60000 { print $1 }' /etc/passwd)
+        for username in $allusernames
+        do
+            echo "$username"
+        done
+    fi
 fi
 
 # end of programme, technecaly unessisary but just to let the programme know
