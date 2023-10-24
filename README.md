@@ -50,7 +50,9 @@ Fun!
 ```
 sudo apt-get remove wireshark
 sudo apt-get remove ophcrack
+
 // only remove if not in readme
+
 sudo apt-get remove apache
 sudo apt-get remove apache2
 sudo apt-get remove nginx
@@ -62,7 +64,36 @@ sudo apt-get remove nginx
 
 `PermitRootLogin no`
 
+`AllowTcpForwarding no`
+
+`X11Forwarding no`
+
+`UsePAM no`
+
+```
+ClientAliveInterval 45
+ClientAliveCountMax 3
+```
+
+`MaxAuthTries 4`
+
+`PermitEmptyPasswords no`
+
+`LogLevel INFO`
+
 `Pass Day`
 
 ###### Config
+
+
+
+###### Contraband
+
+On root desktop
+
+`mkdir contraband`
+
+to move
+
+`mv {file to move} /home/{root user}/Desktop/contraband`
 
