@@ -32,9 +32,6 @@ input() {
     done
 }
 
-# save file of users
-file=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
-
 # remember to allways include the or exit incase their is an inability to change directories
 cd ~/ || { printf "failed to change to root file... Exiting"; exit; }
 

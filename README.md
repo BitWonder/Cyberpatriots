@@ -97,3 +97,8 @@ to move
 
 `mv {file to move} /home/{root user}/Desktop/contraband`
 
+###### More info
+
+https://gist.github.com/bobpaw/a0b6828a5cfa31cfe9007b711a36082f
+
+https://www.youtube.com/watch?v=JVxkTqLoyGY
