@@ -165,3 +165,7 @@ SMB compression enable
 
 Linux?
 ------
+
+mp3's were their
+
+del netcat <- somehow
