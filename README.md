@@ -39,6 +39,8 @@ sudo ufw status
 
 `locate "*.mp3" "*.mp4" "*.jpeg" `
 
+`sudo find -name *.mp3``
+
 ###### Web Browser
 
 Fun!
