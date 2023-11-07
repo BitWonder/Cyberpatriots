@@ -102,3 +102,66 @@ to move
 https://gist.github.com/bobpaw/a0b6828a5cfa31cfe9007b711a36082f
 
 https://www.youtube.com/watch?v=JVxkTqLoyGY
+
+---------------------------------------------------------------
+
+Just Some Windows Stuff?
+------------------------
+
+Guest Account not enable
+
+Admin check
+
+Firewall Protection
+
+Don't require ctrl-alt-del
+
+FillZilla has been stoped (Apache2 and Nginx)
+
+Update
+
+WinRar Update
+
+Remove Goose
+
+RDP network enable
+
+------------------------------
+
+Server?
+-------
+
+Unknown
+
+Backdoor: netstat -anb ???
+
+Remove unauth
+
+Sufficient Password
+
+Defender exclude exe <- enable
+
+file share disable for hidden sharing <- netshare
+
+Install anitvirus
+
+DNS server stop and disable
+
+Update windows
+
+Notepad++ update
+
+Putty has been updated
+
+Remove Metasploit framework software installer
+
+REMOVE PONG!!!
+
+remove netcat backdoor
+
+SMB compression enable
+
+------------------------------------
+
+Linux?
+------
