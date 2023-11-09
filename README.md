@@ -171,3 +171,68 @@ Linux?
 mp3's were their
 
 del netcat <- somehow
+
+min password age set ->
+
+greeter dosn't enumerate acounts -> /etc/lightdm.conf
+
+```
+autologin-guest=false
+greeter-hide-users=true
+guest=false
+
+VNC server 
+enable=false
+
+XMCDP server
+enable=false
+```
+
+IPv4 TCP SYN cookies -> sysctl conf
+
+```
+/etc/sysctl.conf
+
+net.ipv4.tcp_sync_cookie=true
+ICMP accept_redirtect=0
+secure_redirect = 1
+send_redirects = 0
+accept_source_route = 0
+log_martains = 1
+```
+
+ufw
+
+----
+
+/etc/shadow <- set perms
+
+chmod 640 /etc/shadow
+
+check with
+
+stat -c %a /etc/shadow
+
+----
+
+SMTP has been disabled
+
+sudo systemctl <- need to know
+
+chromium can be installed thru apt
+
+LibreOffice
+
+sudo apt-get install tree
+
+tree -L # <- -L sees files
+
+sudo apt show --installed
+
+sudo apt purge nmap
+
+sudo lsof -i <- listening port
+
+chromium ( block adds and blockers ) -> { security settings: strict protection, https: secure, block popups }
+
+FPT allow ssl
