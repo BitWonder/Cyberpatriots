@@ -236,3 +236,20 @@ sudo lsof -i <- listening port
 chromium ( block adds and blockers ) -> { security settings: strict protection, https: secure, block popups }
 
 FPT allow ssl
+
+--------------------------------------------
+
+## More Linux
+
+/etc/pam/common-password
+
+password required pam_unix.so remember=5
+
+password requisite pam_pwquality.so
+
+
+/etc/sudoers
+
+Defaults authenticate
+
+https://cpxvi.s3.amazonaws.com/cpxvi_tr/CPXVI_Ubuntu22_Training2_Answer_Key.pdf
