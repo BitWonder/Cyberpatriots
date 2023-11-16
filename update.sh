@@ -60,6 +60,7 @@ printf "\n"
 printf "Enable firewall"
 if input
 then
+    sudo apt-get install ufw
     sudo ufw enable
 fi
 printf "\n"
