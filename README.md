@@ -253,3 +253,42 @@ password requisite pam_pwquality.so
 Defaults authenticate
 
 https://cpxvi.s3.amazonaws.com/cpxvi_tr/CPXVI_Ubuntu22_Training2_Answer_Key.pdf
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------
+
+
+
+
+# Windows
+
+## active directory!!!
+
+search active directory users and computers
+
+go thru the moving tabs and change stuff based on you wants
+
+
+
+## Config DNS
+
+control panel
+
+network and internet
+
+network and sharing center
+
+Eathernet
+
+IPv4
+
+set all to auto
