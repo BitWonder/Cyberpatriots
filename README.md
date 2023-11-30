@@ -292,3 +292,69 @@ Eathernet
 IPv4
 
 set all to auto
+
+# Back to Active
+
+Active Directory Users and Computers (dsa.msc)
+
+Removed unauthorized users
+
+“Prevent object from accidental deletion”
+“Show only in advanced mode”
+View -> Advanced Mode
+
+password is not stored using reversible encryption
+Properties -> Account -> Store password using reversible encryption
+
+Binky is sensitive and cannot be delegated
+Properties -> Account -> Account is sensitive and cannot be delegated
+
+Domain admin account therefore attributing its credentials to some other task or service could be dangerous
+Punella requires kerberos preauth
+
+Failure to require kerberos preauth allows for ASREProasting (bruteforce of a user’s kerberos session key)
+Removed unauthorized Schema admin Alan
+Removed unauthorized DNS admin Bitzi
+Can lead to privilege escalation (ServerLevelPluginDLL)
+Enterprise Admins are no longer managed by Domain Users
+Enterprise Admins -> Properties -> Managed By -> Clear
+
+Changes permissions so that Domain users can update membership of the Enterprise Admin group
+
+A secure minimum password length is set
+14-20
+
+Fixing Defender
+Messed with permissions on the folder in file explorer and maybe a little in registry 
+Can’t edit settings?
+ 
+ 
+GUI/Commands for defender set registry keys in the same location
+HKLM\SOFTWARE\Microsoft\Windows Defender\
+However you can also set things through GPOs which will get configured elsewhere and override
+HKLM\SOFTWARE\Policies\Microsoft\
+
+
+Everyone is no longer allowed full control on the SYSVOL share
+Computer Management -> Shares -> SYSVOL -> Share Permissions -> Everyone can read
+
+Domain users can no longer read ntds.dit
+C:\Windows\NTDS\ntds.dit -> Properties -> Security -> Delete domain users
+
+Default powershell script double click behavior not set to execute
+HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\(Default) not set to 0
+Other valid options are Open and Edit which will spawn a notepad or ISE window with the given script
+
+Deprecated Triple DES algorithm for windows SCHANNEL disabled
+HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\Triple DES 168\Enabled = 0
+Triple DES has a theoretical flaw that could allow for large bits of data to produce duplicate ciphertext blocks
+
+NetBIOS over TCP disabled
+HKLM\SYSTEM\CurrentControlSet\Services\NetBT\Parameters\Interfaces\Tcpip_{9e1b6253-7665-4558-8ac5-5108d39a0d59}\NetbiosOptions = 2
+Old and unnecessary, used by red team for enumeration and spoofing
+
+System failures do not cause automatic memory dumps
+HKLM\SYSTEM\CurrentControlSet\control\CrashControl\CrashDumpEnabled = 0
+Prevents potentially sensitive information from being dumped into .dmp files if the system crashes/shuts down
+Poorly coded apps could dump things like creds
+
